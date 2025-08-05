@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className=" mx-50 my-10">
         <Nav />
       </div>
     </>
