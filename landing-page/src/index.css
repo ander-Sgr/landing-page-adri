@@ -1,1 +1,82 @@
+@font-face {
+    font-family: Playfair;
+    src: url("../src/assets/fonts/PlayfairDisplay-Bold.ttf");
+}
+
+@font-face {
+    font-family: Inter;
+    src: url("../src/assets/fonts/Inter_18pt-Regular.ttf")
+}
+
 @import "tailwindcss";
+
+@theme {
+    --font-playfair: Playfair, "sans-serif";
+    --font-inter: Inter, "sans-serif"
+}
+
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); opacity: 0.8; }
+  50% { transform: translateY(-10px) rotate(5deg); opacity: 1; }
+  100% { transform: translateY(0px) rotate(0deg); opacity: 0.8; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Existing float animation */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+/*
+ * =========================================
+ * NUEVA ANIMACIÓN PARA EL NAVBAR
+ * =========================================
+ */
+@keyframes slideDownFadeIn {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 1s ease-out forwards;
+}
+
+.animate-slideDownFadeIn {
+  animation: slideDownFadeIn 0.8s ease-out forwards;
+  /* Opcional: añade un pequeño retraso para que no sea tan inmediato */
+  /* animation-delay: 0.2s; */
+}

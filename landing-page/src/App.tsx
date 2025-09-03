@@ -1,13 +1,16 @@
 import Nav from "./components/navbar/Nav"
+import Hero from "./components/hero/Hero"
 
 function App() {
 
   return (
-    <>
-      <div className=" mx-50 my-10">
-        <Nav />
-      </div>
-    </>
+
+    <div className=" mx-0 my-0">
+      <Nav />
+
+      <Hero />
+      holañdlasldsad
+    </div>
   )
 }
 
