@@ -29,7 +29,7 @@ export default function Nav() {
     }, [menuOpen]);
 
     return (
-        <nav className="fixed top-4 left-0 w-full bg-[#FAF5E9] z-50">
+        <nav className="fixed top-3 left-0 w-full  z-50">
             <div className="flex items-center justify-between px-6 md:px-8 lg:px-46 py-4">
                 <img src={logoNavbar} alt="logo navbar" className="h-12 w-auto" />
 
