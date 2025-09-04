@@ -1,5 +1,6 @@
 import Nav from "./components/navbar/Nav"
 import Hero from "./components/hero/Hero"
+import { Services } from "./components/services/Services"
 
 function App() {
 
@@ -9,6 +10,8 @@ function App() {
       <Nav />
 
       <Hero />
+
+      <Services/>
       holañdlasldsad
     </div>
   )

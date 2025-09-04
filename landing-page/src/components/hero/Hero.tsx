@@ -42,7 +42,7 @@ const Hero = () => {
       {/* Overlay for subtle effect */}
       <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-white/10 pointer-events-none z-0" />
 
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 md:px-12 relative z-10 py-12 md:py-0">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 md:px-12 relative z-10 py-15 md:py-0">
         {/* Left Column: Text */}
         <div className="flex-1 text-center md:text-left z-20 animate-slideInLeft">
           <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-[#1C3C31] drop-shadow-lg">
