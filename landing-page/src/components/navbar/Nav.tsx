@@ -29,9 +29,9 @@ export default function Nav() {
     }, [menuOpen]);
 
     return (
-        <nav className="fixed top-2 left-0 w-full  z-50">
+        <nav className="fixed left-0 w-full z-50 bg-amber-50">
             <div className="flex items-center justify-between px-6 md:px-8 lg:px-46 md:py-4 p-0">
-                <img src={logoNavbar} alt="logo navbar" className="h-12 w-auto" />
+                <img src={logoNavbar} alt="logo navbar" className="md:h-12 w-auto h-10" />
 
                 {/* Links desktop: Oculto por defecto, visible desde 'md' hacia arriba */}
                 <ul className="hidden md:flex gap-18 font-semibold text-base">
