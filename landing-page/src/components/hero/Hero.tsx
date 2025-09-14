@@ -19,7 +19,7 @@ const Hero = () => {
   }, [allPlates.length]);
 
   return (
-    <section className="relative w-full min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#FAF5E9] via-[#FAF5E9] to-[#ffffff] animate-fadeIn">
+    <section id="inicio" className="relative w-full min-h-screen flex items-center overflow-hidden  animate-fadeIn">
       {/* Decorative floating leaves */}
       <img src={leaf2} alt="" className="absolute top-1/4 left-5 w-16 md:w-24 opacity-60 animate-float blur-[2px] pointer-events-none" />
       <img src={leaf2} alt="" className="absolute bottom-1/3 right-10 w-16 md:w-24 opacity-40 animate-float blur-[6px] pointer-events-none" />
@@ -36,11 +36,10 @@ const Hero = () => {
       <svg className="absolute bottom-0 right-0 w-full h-full pointer-events-none z-0 opacity-30 rotate-180" viewBox="0 0 100 100">
         <path d="M-10,30 Q30,10 50,50 T110,70" fill="none" stroke="#b7e4c7" strokeWidth="0.5" />
         <path d="M0,70 Q40,90 70,60 T120,40" fill="none" stroke="#b7e4c7" strokeWidth="0.5" />
-        <path d="M20,-10 Q50,20 80,10 T110,0" fill="none" stroke="#b7e4c7" strokeWidth="0.5" />
       </svg>
 
       {/* Overlay for subtle effect */}
-      <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-white/10 pointer-events-none z-0" />
+      <div className="absolute inset-0  pointer-events-none z-0" />
 
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 md:px-12 relative z-10 py-15 md:py-0">
         {/* Left Column: Text */}
@@ -53,7 +52,12 @@ const Hero = () => {
           <p className="font-inter text-[#344E41] md:text-lg max-w-prose mb-8 mx-auto md:mx-0">
             Asesorías nutricionales y entrenamiento personalizados para que alcances tu mejor versión.
           </p>
-          <button className="bg-[#344E41] text-white font-semibold px-8 py-4 rounded-full shadow-xl hover:bg-[#3A5A40] hover:scale-105 transition-all duration-300 text-lg tracking-wide">
+          <button className="bg-[#344E41] text-white font-semibold px-8 py-4 rounded-full shadow-xl hover:bg-[#3A5A40] hover:scale-105 transition-all duration-300 text-lg tracking-wide " onClick={() => {
+            const section = document.querySelector("#contacto");
+            if (section) {
+              section.scrollIntoView({ behavior: "smooth" });
+            }
+          }}>
             Empieza Ahora
           </button>
         </div>

@@ -77,6 +77,8 @@
 
 .animate-slideDownFadeIn {
   animation: slideDownFadeIn 0.8s ease-out forwards;
-  /* Opcional: añade un pequeño retraso para que no sea tan inmediato */
-  /* animation-delay: 0.2s; */
+}
+
+html {
+  scroll-behavior: smooth;
 }

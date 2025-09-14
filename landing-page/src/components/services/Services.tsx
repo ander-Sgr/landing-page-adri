@@ -22,8 +22,13 @@ export const Services = () => {
     ];
 
     return (
-        <section className="pt-6 md:p-6 bg-gradient-to-br from-[#FAF5E9] via-[#FAF5E9] to-[#ffffff] animate-fadeIn">
-            <div className="text-center mb-12">
+        <section id="servicios" className=" scroll-mt-20 relative px-6 py-16 md:py-24 lg:py-28 bg-gradient-to-br from-[#FAF5E9] via-[#FAF5E9] to-[#ffffff] animate-fadeIn overflow-hidden">
+            {/* Top-left frame */}
+            <div className="absolute top-0 left-0 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-28 lg:h-28 bg-[#1C3C31]" />
+            {/* Bottom-right frame */}
+            <div className="absolute bottom-0 right-0 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-28 lg:h-28 bg-[#1C3C31]" />
+
+            <div className="text-center mb-12 relative z-10"> {/* Added relative z-10 to bring content forward */}
                 <h2 className="text-xl md:text-3xl font-semibold text-orange-500 font-playfair mb-4">
                     Servicios
                 </h2>
@@ -32,7 +37,7 @@ export const Services = () => {
                 </h1>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-8">
+            <div className="flex flex-col md:flex-row gap-8 relative z-10"> {/* Added relative z-10 */}
                 {serviceItems.map((item, idx) => (
                     <div
                         key={idx}
@@ -53,6 +58,5 @@ export const Services = () => {
                 ))}
             </div>
         </section>
-
     );
 };
