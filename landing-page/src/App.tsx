@@ -1,6 +1,7 @@
 import Nav from "./components/navbar/Nav"
 import Hero from "./components/hero/Hero"
 import { Services } from "./components/services/Services"
+import ContactForm from "./components/contact/ContactForm"
 
 function App() {
 
@@ -11,8 +12,9 @@ function App() {
 
       <Hero />
 
-      <Services/>
-      holañdlasldsad
+      <Services />
+
+      <ContactForm />
     </div>
   )
 }
