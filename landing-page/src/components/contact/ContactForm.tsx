@@ -5,7 +5,7 @@ import { PhoneIcon, MailIcon, MapIcon } from "lucide-react";
 export default function ContactForm() {
     const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
     const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
-    const PUBLIC_ID= import.meta.env.VITE_PUBLIC_ID;
+    const PUBLIC_ID = import.meta.env.VITE_PUBLIC_ID;
 
     const [formData, setFormData] = useState({
         name: "",
@@ -14,15 +14,16 @@ export default function ContactForm() {
         message: "",
     });
 
-    const form = useRef();
+    const form = useRef<HTMLFormElement>(null)
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
+        
+        if (!form.current) return;
         emailjs
             .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
                 publicKey: PUBLIC_ID,
